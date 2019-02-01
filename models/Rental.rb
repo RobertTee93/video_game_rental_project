@@ -28,4 +28,23 @@ class Rental
     @date_of_rental = result[0]["date_of_rental"]
   end
 
+  def delete
+    sql = "DELETE FROM rentals WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
+  def self.delete_by_id(id)
+    sql = "DELETE FROM rentals WHERE id = $1"
+    values = [id]
+    SqlRunner.run(sql, values)
+  end
+
+  def self.all
+    sql = "SELECT * FROM rentals"
+    rentals = SqlRunner.run(sql)
+    return rentals.map { |rental| Rental.new(rental) }
+  end
+
+
 end
