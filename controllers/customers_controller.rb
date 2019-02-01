@@ -16,3 +16,14 @@ post "/customers/" do
   customer.save()
   redirect( "/customers" )
 end
+
+get "/customers/:id/edit" do
+  @customer = Customer.find_by_id(params[:id])
+  erb( :"customers/edit")
+end
+
+post "/customers/:id" do
+  new_customer = Customer.new(params)
+  new_customer.update()
+  redirect( "/customers")
+end

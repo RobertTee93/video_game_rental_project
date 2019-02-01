@@ -8,10 +8,10 @@
   <p>Last Name: <%= customer.last_name %></p>
   <p>Phone Number: <%= customer.phone_number %></p>
   <p>Date of Birth: <%= customer.date_of_birth %></p>
-  <form action="/customer/<%= customer.id %>/edit" method="get">
+  <form action="/customers/<%= customer.id %>/edit" method="get">
     <button type="submit">Edit</button>
   </form>
-  <form action="/customer/<%= customer.id %>/delete" method="post">
+  <form action="/customers/<%= customer.id %>/delete" method="post">
     <button type="submit">Delete</button>
   </form>
 </div>

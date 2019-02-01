@@ -64,4 +64,11 @@ class Customer
     return customers.map { |customer| Customer.new(customer) }
   end
 
+  def self.find_by_id(id)
+    sql = "SELECT * FROM customers WHERE id = $1"
+    values = [id]
+    customer = SqlRunner.run(sql, values).first
+    return Customer.new(customer)
+  end
+
 end
