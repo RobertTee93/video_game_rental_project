@@ -7,7 +7,7 @@
   <p>Platform: <%= game.platform %></p>
   <p>Release Date: <%= game.release_date %></p>
   <img src="<%= game.box_art %>" alt="image unavailable">
-  <form action="/games/<% game.id %>/delete" method="post">
+  <form action="/games/<%= game.id %>/delete" method="post">
     <button type="submit">Delete</button>
   </form>
 </div>
