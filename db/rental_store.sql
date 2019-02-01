@@ -21,7 +21,7 @@ CREATE TABLE customers(
 
 CREATE TABLE rentals(
   id SERIAL4 PRIMARY KEY,
-  customer_id INT4 REFERENCES customers(id),
-  game_id INT4 REFERENCES games(id),
+  customer_id INT4 REFERENCES customers(id) ON DELETE CASCADE,
+  game_id INT4 REFERENCES games(id) ON DELETE CASCADE,
   date_of_rental DATE NOT NULL DEFAULT CURRENT_DATE
 )

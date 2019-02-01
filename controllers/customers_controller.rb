@@ -27,3 +27,9 @@ post "/customers/:id" do
   new_customer.update()
   redirect( "/customers")
 end
+
+post "/customers/:id/delete" do
+  @customer = Customer.find_by_id(params["id"])
+  @customer.delete()
+  erb( :"customers/delete")
+end
