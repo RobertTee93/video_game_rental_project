@@ -1,0 +1,9 @@
+<form method="get" action="/customers/new">
+    <button type="submit">Add New Customer</button>
+</form>
+
+<% @customers.each do |customer| %>
+<div class="customers">
+  <p>First Name: <%= customer.first_name %> </p>
+</div>
+<% end %>
