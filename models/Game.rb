@@ -51,5 +51,12 @@ class Game
     return games.map { |game| Game.new(game) }
   end
 
+  def self.available_games
+    sql = "SELECT * FROM games INNER JOIN rentals
+           ON games.id != rentals.game_id"
+    available_games = SqlRunner.run(sql)
+    return available_games.map { |game| Game.new(game) }
+  end
+
 
 end
