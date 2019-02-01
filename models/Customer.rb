@@ -4,6 +4,7 @@ require_relative("../db/sql_runner.rb")
 class Customer
 
   attr_accessor :first_name, :last_name, :phone_number, :date_of_birth
+  attr_reader :id
 
   def initialize(options)
     @first_name = options["first_name"]

@@ -3,6 +3,7 @@ require_relative("../db/sql_runner.rb")
 class Game
 
   attr_accessor :name, :genre, :platform, :release_date, :box_art
+  attr_reader :id
 
   def initialize(options)
     @name = options["name"]
