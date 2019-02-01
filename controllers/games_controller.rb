@@ -12,3 +12,8 @@ post "/games/:id/delete" do
   @game.delete()
   erb( :"games/delete" )
 end
+
+get "/games/available" do
+  @games = Game.available_games
+  erb( :"games/available")
+end

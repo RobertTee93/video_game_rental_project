@@ -1,13 +1,4 @@
-<h1>Games</h1>
-
-<form action="games/newl" method="get">
-  <input type="submit" value="Add New Game">
-</form>
-
-<ul>
-  <li>Sort By</li>
-  <li><a href="/games/available">Available Games</a></li>
-</ul>
+<h1>Available Games</h1>
 
 <% @games.each do |game| %>
 <div class="games">
