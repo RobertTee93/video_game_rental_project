@@ -1,0 +1,15 @@
+<h1>Games</h1>
+
+<% @games.each do |game| %>
+<div class="games">
+  <p>Name: <%= game.name %></p>
+  <p>Genre: <%= game.genre %></p>
+  <p>Platform: <%= game.platform %></p>
+  <p>Release Date: <%= game.release_date %></p>
+  <img src="<%= game.box_art %>" alt="image unavailable">
+  <form action="/games/<% game.id %>/delete" method="post">
+    <button type="submit">Delete</button>
+  </form>
+</div>
+
+<% end %>
