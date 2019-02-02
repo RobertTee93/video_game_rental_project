@@ -1,0 +1,30 @@
+<h1> Current Rentals </h1>
+
+<form action="rentals/new" method="get">
+  <input type="submit" value="Add New Rental">
+</form>
+
+<% @rentals.each do |rental| %>
+
+<div class="rentals">
+<% customers = rental.find_customers %>
+<% customers.each do |customer| %>
+
+<p>First Name: <%= customer.first_name %></p>
+<p>Last Name: <%= customer.last_name %> </p>
+<p>Phone: <%= customer.phone_number %></p>
+
+<% end %>
+<% games = rental.find_games %>
+<% games.each do |game| %>
+
+<p>Game: <%= game.name %></p>
+
+<% end %>
+
+<p>Rental Date: <%= rental.date_of_rental %></p>
+
+<div>
+
+
+<% end %>
