@@ -52,8 +52,9 @@ class Game
   end
 
   def self.available_games
-    sql = "SELECT * FROM games INNER JOIN rentals
-           ON games.id != rentals.game_id"
+    sql = "SELECT games.* FROM games LEFT JOIN rentals
+           ON games.id = rentals.game_id
+           WHERE rentals.game_id IS NULL"
     available_games = SqlRunner.run(sql)
     return available_games.map { |game| Game.new(game) }
   end

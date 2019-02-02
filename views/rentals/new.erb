@@ -1,0 +1,25 @@
+<h1>Add new Rental</h1>
+
+<form action="/rentals/" method="post">
+
+  <label for="game">Game:</label>
+  <select name="game_id" id="game">
+
+    <% @games.each do |game| %>
+    <option value="<%= game.id %>"> <%= game.name %> </option>
+    <% end %>
+
+  </select>
+
+  <label for="customer">Customer:</label>
+  <select name="customer_id" id="customer">
+
+    <% @customers.each do |customer| %>
+    <option value="<%=customer.id%>"> <%= customer.first_name %> <%= customer.last_name%></option>
+    <% end %>
+
+  </select>
+
+  <input type="submit" value="Add New Rental">
+
+</form>
