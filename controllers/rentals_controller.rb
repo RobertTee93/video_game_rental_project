@@ -18,3 +18,9 @@ post "/rentals/" do
   @rental.save()
   erb( :"rentals/create" )
 end
+
+post "/rentals/:id/delete" do
+  @rental = Rental.find_by_id(params["id"])
+  @rental.delete
+  erb ( :"rentals/return" )
+end

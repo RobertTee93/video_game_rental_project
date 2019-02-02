@@ -17,7 +17,12 @@
 <p>Game: <%= game.name %></p>
 
 <p>Rental Date: <%= rental.date_of_rental %></p>
-<hr>
-<% end %>
 
+<form action="rentals/<%= rental.id %>/delete" method="post">
+  <input type="submit" value="Return to Stock">
+</form>
+
+
+<hr>
 <div>
+<% end %>

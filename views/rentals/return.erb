@@ -1,0 +1,5 @@
+<% customer = Customer.find_by_id(@rental.customer_id) %>
+<% game = Game.find_by_id(@rental.game_id) %>
+
+<p><%= customer.first_name %> <%= customer.last_name %> has returned </p>
+<p><%= game.name %> and it has been checked back in to stock</p>
