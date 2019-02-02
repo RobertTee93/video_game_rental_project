@@ -1,22 +1,3 @@
-<h1>Games</h1>
-
-<form action="games/new" method="get">
-  <input type="submit" value="Add New Game">
-</form>
-
-<ul>
-  <li>Sort By</li>
-  <li><a href="/games/available">Available Games</a></li>
-</ul>
-
-
-<ul>
-  <li>View By Genre:</li>
-  <% @genres.each do |genre| %>
-  <li><a href="/games/find/<%= genre %>"><%= genre %></a></li>
-  <% end %>
-</ul>
-
 <div class="flex-container">
 <% @games.each do |game| %>
 <div class="games">

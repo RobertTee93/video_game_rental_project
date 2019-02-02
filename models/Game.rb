@@ -72,4 +72,11 @@ class Game
     return genres.map { |genre| genre["genre"] }
   end
 
+  def self.find_by_genre(genre)
+    sql = "SELECT * FROM games WHERE genre = $1"
+    values = [genre]
+    games = SqlRunner.run(sql, values)
+    return games.map { |game| Game.new(game)}
+  end
+
 end

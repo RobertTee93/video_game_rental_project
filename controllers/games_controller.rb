@@ -3,8 +3,14 @@ require_relative("../models/Game")
 also_reload("../models/*")
 
 get "/games" do
+  @genres = Game.genres
   @games = Game.all
   erb( :"games/index" )
+end
+
+get "/games/find/:genre" do
+  @games = Game.find_by_genre(params[:genre])
+  erb( :"games/genre")
 end
 
 get "/games/new" do

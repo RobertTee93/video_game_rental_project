@@ -1,0 +1,15 @@
+.flex-container {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.games img {
+  height: 200px;
+  width: 200px;
+}
+
+.games {
+}
