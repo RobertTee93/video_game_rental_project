@@ -66,5 +66,10 @@ class Game
     return Game.new(game)
   end
 
+  def self.genres()
+    sql = "SELECT DISTINCT genre FROM games;"
+    genres = SqlRunner.run(sql)
+    return genres.map { |genre| genre["genre"] }
+  end
 
 end
