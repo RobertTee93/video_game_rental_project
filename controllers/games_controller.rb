@@ -13,6 +13,11 @@ get "/games/find/:genre" do
   erb( :"games/genre")
 end
 
+get "/games/search/" do
+  @games = Game.search_by_word(params[:word])
+  erb( :"games/search")
+end
+
 get "/games/new" do
   erb( :"games/new")
 end
