@@ -1,23 +1,32 @@
 <h1>Games</h1>
 
-<form action="games/new" method="get">
-  <input type="submit" value="Add New Game">
+<form class="search-bar" action="games/:word/search" method="get">
+
+  <input type="text" name="search" value="">
+  <input type="submit" value="Search">
 </form>
+
+<form action="games/new" method="get">
+  <input class="form-submit-button" type="submit" value="Add New Game">
+</form>
+
+<nav class="games_nav">
 
 <ul>
   <li>Sort By</li>
   <li><a href="/games/available">Available Games</a></li>
 </ul>
+</nav>
 
-
+<nav class="games_nav">
 <ul>
   <li>View By Genre:</li>
   <% @genres.each do |genre| %>
   <li><a href="/games/find/<%= genre %>"><%= genre %></a></li>
   <% end %>
 </ul>
+</nav>
 
-<div class="flex-container">
 <% @games.each do |game| %>
 <div class="games">
   <p>Name: <%= game.name %></p>
@@ -31,4 +40,3 @@
 </div>
 
 <% end %>
-</div>

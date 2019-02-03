@@ -79,4 +79,13 @@ class Game
     return games.map { |game| Game.new(game)}
   end
 
+  def self.search_by_word(word)
+    games = self.all
+    found_games = []
+    games.each do |game| if game.name.downcase.include?(word.downcase)
+      found_games << game end
+    end
+    return found_games
+  end
+
 end

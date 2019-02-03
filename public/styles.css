@@ -1,3 +1,11 @@
+* {
+  font-family: 'Alegreya', serif;
+}
+
+body {
+  background-color: #fff;
+}
+
 .flex-container {
   display: -webkit-flex;
   display: -ms-flex;
@@ -6,10 +14,135 @@
   justify-content: space-around;
 }
 
+h1 {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+#main-nav {
+  background: #333;
+  height: 35px;
+  border-radius: 0px 0px 10px 10px;
+  font-size: 25px;
+}
+
+#main-nav li {
+  display: inline;
+  margin-right: 10px;
+}
+
+#main-nav ul {
+  margin-top: 0;
+}
+
+#main-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+a {
+  color: Blue;
+  text-decoration: none;
+}
+
+form {
+  font-size: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+form input {
+  font-size: 25px;
+  margin-top: 5px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+form button {
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+form select {
+  font-size: 20px;
+}
+
+/* Games pages css */
+
 .games img {
   height: 200px;
   width: 200px;
 }
 
 .games {
+  text-align: center;
+  padding: 40px;
+}
+
+.games_nav {
+  width: -webkit-fill-available;
+  text-align: center;
+}
+
+.games_nav li {
+  display: inline;
+  list-style: none;
+  padding-left: 5px;
+}
+
+.search-bar {
+  align-self: flex-end;
+  flex-direction: inherit;
+  height: 30px;
+  font-size: 20px;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.search-bar input {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+/* custmers pages */
+
+
+.customers {
+  text-align: center;
+  padding: 40px;
+}
+
+.customers_nav {
+  width: 100%;
+}
+
+.customers_nav form {
+  align-items: center;
+}
+
+.customers_nav button {
+  width: 150px;
+  text-align: center;
+}
+
+/* Rentals pages  */
+
+.rentals {
+  text-align: center;
+}
+
+.rental_nav {
+  width: 100%;
+}
+
+.rental_nav form {
+  align-items: center;
+}
+
+.rental_nav button {
+  width: 150px;
+  text-align: center;
 }

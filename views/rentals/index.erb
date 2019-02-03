@@ -1,8 +1,10 @@
 <h1> Current Rentals </h1>
 
+<nav class="rental_nav">
 <form action="rentals/new" method="get">
   <input type="submit" value="Add New Rental">
 </form>
+</nav>
 
 
 <%@rentals.each do |rental| %>
@@ -23,6 +25,5 @@
 </form>
 
 
-<hr>
-<div>
+</div>
 <% end %>
