@@ -1,32 +1,56 @@
 <h1>Games</h1>
 
+<nav class="games_nav">
+<ul>
+  <li>Sort By</li>
+  <li><a href="/games/available">Available Games</a></li>
+  <li><a href="/games/sort/z-a">Z - A</a></li>
+  <li><a href="/games/sort/release-date">Release Date by Newest</a></li>
+</ul>
+</nav>
+
+<nav class="games_nav">
+<form action="games/find/genre/" method="get">
+
+  <input type="submit" value="Genre">
+  <select name="genre">
+    <% @genres.each do |genre| %>
+    <option value="<%= genre %>"><%= genre %></option>
+    <% end %>
+  </select>
+</form>
+
+</nav>
+
+<nav class="games_nav">
+
+<form action="games/find/platform/" method="get">
+
+  <input type="submit" value="Platform">
+  <select name="platform">
+    <% @platforms.each do |platform| %>
+    <option value="<%= platform %>"><%= platform %></option>
+    <% end %>
+  </select>
+</form>
+
+</nav>
+
+<nav class="games_nav">
+<form action="games/new" method="get">
+  <input type="submit" value="Add New Game">
+</form>
+</nav>
+
+<nav class="games_nav">
 <form class="search-bar" action="games/search/" method="get">
 
   <input type="text" name="word" value="">
   <input type="submit" value="Search">
 
 </form>
-
-<form action="games/new" method="get">
-  <input class="form-submit-button" type="submit" value="Add New Game">
-</form>
-
-<nav class="games_nav">
-
-<ul>
-  <li>Sort By</li>
-  <li><a href="/games/available">Available Games</a></li>
-</ul>
 </nav>
 
-<nav class="games_nav">
-<ul>
-  <li>View By Genre:</li>
-  <% @genres.each do |genre| %>
-  <li><a href="/games/find/<%= genre %>"><%= genre %></a></li>
-  <% end %>
-</ul>
-</nav>
 
 <% @games.each do |game| %>
 <div class="games">

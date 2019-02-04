@@ -46,7 +46,13 @@ class Game
   end
 
   def self.all
-    sql = "SELECT * FROM games"
+    sql = "SELECT * FROM games ORDER BY name"
+    games = SqlRunner.run(sql)
+    return games.map { |game| Game.new(game) }
+  end
+
+  def self.all_by_date
+    sql = "SELECT * FROM games ORDER BY release_date"
     games = SqlRunner.run(sql)
     return games.map { |game| Game.new(game) }
   end
@@ -72,9 +78,22 @@ class Game
     return genres.map { |genre| genre["genre"] }
   end
 
+  def self.platforms()
+    sql = "SELECT DISTINCT platform FROM games;"
+    platforms = SqlRunner.run(sql)
+    return platforms.map { |platform| platform["platform"] }
+  end
+
   def self.find_by_genre(genre)
     sql = "SELECT * FROM games WHERE genre = $1"
     values = [genre]
+    games = SqlRunner.run(sql, values)
+    return games.map { |game| Game.new(game)}
+  end
+
+  def self.find_by_platform(platform)
+    sql = "SELECT * FROM games WHERE platform = $1"
+    values = [platform]
     games = SqlRunner.run(sql, values)
     return games.map { |game| Game.new(game)}
   end

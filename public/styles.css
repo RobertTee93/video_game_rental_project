@@ -6,6 +6,13 @@ body {
   background-color: #fff;
 }
 
+.break {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  width: 99%;
+}
+
 .flex-container {
   display: -webkit-flex;
   display: -ms-flex;
@@ -22,7 +29,7 @@ h1 {
 
 #main-nav {
   background: #333;
-  height: 35px;
+  height: 50px;
   border-radius: 0px 0px 10px 10px;
   font-size: 25px;
 }
@@ -34,11 +41,21 @@ h1 {
 
 #main-nav ul {
   margin-top: 0;
+  font-size: 30px;
 }
 
 #main-nav a {
   color: white;
   text-decoration: none;
+}
+
+#main-nav img {
+  color: white;
+  text-decoration: none;
+  height: 40px;
+  margin-top: 5px;
+  border-radius: 20px;
+  float: right;
 }
 
 a {
@@ -78,33 +95,39 @@ form select {
 }
 
 .games {
+  min-width: unset;
   text-align: center;
   padding: 40px;
+  border: #333 solid 1px;
+  border-radius: 40px;
+  margin: 10px;
+  box-shadow: 3px -4px 19px black;
+  max-width: 200px;
 }
 
+
 .games_nav {
-  width: -webkit-fill-available;
-  text-align: center;
+    order: -1;
 }
 
 .games_nav li {
-  display: inline;
+  display: block;
   list-style: none;
   padding-left: 5px;
+  text-align: center;
 }
 
 .search-bar {
-  align-self: flex-end;
+  /* align-self: flex-end; */
   flex-direction: inherit;
-  height: 30px;
-  font-size: 20px;
-  width: 100%;
-  justify-content: flex-end;
+  /* height: 30px; */
+  /* font-size: 20px; */
+  /* width: 33%; */
+  /* justify-content: flex-end; */
 }
 
 .search-bar input {
   font-size: 20px;
-  margin-top: 0;
 }
 
 /* custmers pages */
@@ -113,6 +136,11 @@ form select {
 .customers {
   text-align: center;
   padding: 40px;
+  background-color: #333;
+  color: white;
+  border-radius: 50px;
+  border: red 10px solid;
+  margin-top: 20px;
 }
 
 .customers_nav {
