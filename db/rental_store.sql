@@ -1,3 +1,4 @@
+DROP TABLE rental_history;
 DROP TABLE rentals;
 DROP TABLE customers;
 DROP TABLE games;
@@ -24,4 +25,14 @@ CREATE TABLE rentals(
   customer_id INT4 REFERENCES customers(id) ON DELETE CASCADE,
   game_id INT4 REFERENCES games(id) ON DELETE CASCADE,
   date_of_rental DATE NOT NULL DEFAULT CURRENT_DATE
-)
+);
+
+CREATE TABLE rental_history(
+  id SERIAL4 PRIMARY KEY,
+  rental_id INT4,
+  customer_id INT4 REFERENCES customers(id) ON DELETE CASCADE,
+  game_id INT4 REFERENCES customers(id) ON DELETE CASCADE,
+  date_of_rental DATE NOT NULL DEFAULT CURRENT_DATE,
+  returned_date DATE NOT NULL DEFAULT CURRENT_DATE
+
+);

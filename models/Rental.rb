@@ -28,7 +28,24 @@ class Rental
     @date_of_rental = result[0]["date_of_rental"]
   end
 
+  def archive
+    sql = "INSERT INTO rental_history
+    (
+      rental_id,
+      game_id,
+      customer_id,
+      date_of_rental
+    )
+      VALUES
+    (
+      $1, $2, $3, $4
+    )"
+    values = [@id, @game_id, @customer_id, @date_of_rental]
+    SqlRunner.run(sql, values)
+  end
+
   def delete
+    archive()
     sql = "DELETE FROM rentals WHERE id = $1"
     values = [@id]
     SqlRunner.run(sql, values)
