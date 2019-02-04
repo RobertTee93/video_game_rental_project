@@ -186,9 +186,7 @@ form select {
   text-align: center;
 }
 
-.rental_nav {
-  width: 100%;
-}
+.rental_nav {order: -1;}
 
 .rental_nav form {
   align-items: center;

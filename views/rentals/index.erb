@@ -6,6 +6,12 @@
 </form>
 </nav>
 
+<nav class="rental_nav">
+<form action="/rentals/history" method="get">
+  <input type="submit" value="Rental History">
+</form>
+</nav>
+
 
 <%@rentals.each do |rental| %>
 <% customer = rental.customer.first %>
