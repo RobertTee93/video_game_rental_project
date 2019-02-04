@@ -5,18 +5,18 @@ DROP TABLE games;
 
 CREATE TABLE games(
   id SERIAL4 PRIMARY KEY,
-  name VARCHAR(255),
-  genre VARCHAR(255),
-  platform VARCHAR(255),
-  release_date DATE,
-  box_art VARCHAR(255)
+  name VARCHAR(255) NOT NULL,
+  genre VARCHAR(255) NOT NULL,
+  platform VARCHAR(255) NOT NULL,
+  release_date DATE NOT NULL,
+  box_art VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE customers(
   id SERIAL4 PRIMARY KEY,
-  first_name VARCHAR(255),
-  last_name VARCHAR(255),
-  phone_number VARCHAR(255),
+  first_name VARCHAR(255) NOT NULL,
+  last_name VARCHAR(255) NOT NULL,
+  phone_number VARCHAR(255) NOT NULL,
   date_of_birth DATE
 );
 

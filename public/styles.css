@@ -60,6 +60,7 @@ h1 {
   margin-top: 5px;
   border-radius: 20px;
   float: right;
+  margin-right: 10px;
 }
 
 #home-img {
@@ -93,10 +94,16 @@ form input {
 form button {
   font-size: 20px;
   border-radius: 5px;
+  background-color: #333;
+  border: 3px red solid;
+  color: white;
 }
 
 form select {
   font-size: 20px;
+  border: 2px solid;
+  background: #333;
+  color: white;
 }
 
 /* Games pages css */

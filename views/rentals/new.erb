@@ -5,8 +5,12 @@
   <label for="game">Game:</label>
   <select name="game_id" id="game">
 
-    <% @games.each do |game| %>
-    <option value="<%= game.id %>"> <%= game.name %> </option>
+    <% if @games.length == 0 %>
+       <option value="null">No Games Available</option>
+     <% else %>
+        <% @games.each do |game|%>
+        <option value="<%= game.id %>"> <%= game.name %> </option>
+      <% end %>
     <% end %>
 
   </select>
