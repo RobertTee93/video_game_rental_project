@@ -44,6 +44,12 @@ class Rental
     SqlRunner.run(sql, values)
   end
 
+  def self.rental_history
+    sql = "SELECT * FROM rental_history"
+    rentals = SqlRunner.run(sql)
+    return rentals
+  end
+
   def delete
     archive()
     sql = "DELETE FROM rentals WHERE id = $1"
