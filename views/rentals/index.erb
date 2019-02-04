@@ -8,8 +8,8 @@
 
 
 <%@rentals.each do |rental| %>
-<% customer = Customer.find_by_id(rental.customer_id) %>
-<% game = Game.find_by_id(rental.game_id) %>
+<% customer = rental.customer.first %>
+<% game = rental.game.first %>
 
 <div class="rentals">
 <p>First Name: <%= customer.first_name %></p>

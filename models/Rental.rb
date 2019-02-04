@@ -63,7 +63,7 @@ class Rental
     return rentals.map { |rental| Rental.new(rental) }
   end
 
-  def find_customers()
+  def customer()
     sql = "SELECT * FROM customers INNER JOIN rentals
            ON customers.id = $1"
     values = [@customer_id]
@@ -71,7 +71,7 @@ class Rental
     return customers.map { |customer| Customer.new(customer) }
   end
 
-  def find_games
+  def game
     sql = "SELECT * FROM games INNER JOIN rentals
            ON games.id = $1"
     values = [@game_id]
