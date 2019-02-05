@@ -44,7 +44,7 @@ game5 = Game.new({
   })
 
 game6 = Game.new({
-  "name" => "The Ledgend of Zelda: Breath of the Wild",
+  "name" => "The Legend of Zelda: Breath of the Wild",
   "genre" => "Adventure",
   "platform" => "Nintendo Switch",
   "release_date" => "2017-03-03",

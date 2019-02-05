@@ -1,16 +1,16 @@
 <form action="/customers/<%= @customer.id %>" method="post">
 
   <label for="first_name">First Name:</label>
-  <input type="text" name="first_name" id="first_name" value="<%= @customer.first_name %>">
+  <input type="text" name="first_name" id="first_name" value="<%= @customer.first_name %>" required>
 
   <label for="last_name">Last Name:</label>
-  <input type="text" name="last_name" id="last_name" value="<%= @customer.last_name %>">
+  <input type="text" name="last_name" id="last_name" value="<%= @customer.last_name %>"required>
 
   <label for="phone_number">Phone Number</label>
-  <input type="text" name="phone_number" id="phone_number" value="<%= @customer.phone_number %>">
+  <input type="text" name="phone_number" id="phone_number" value="<%= @customer.phone_number %>"required>
 
   <label for="date_of_birth">Birthday</label>
-  <input type="date" name="date_of_birth" id="date_of_birth" value="<%= @customer.date_of_birth %>">
+  <input type="date" name="date_of_birth" id="date_of_birth" value="<%= @customer.date_of_birth %>"required>
 
   <input type="submit" value="Edit Customer">
 
