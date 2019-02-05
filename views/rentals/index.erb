@@ -14,8 +14,8 @@
 
 
 <%@rentals.each do |rental| %>
-<% customer = rental.customer.first %>
-<% game = rental.game.first %>
+<% customer = rental.customer %>
+<% game = rental.game%>
 
 <div class="rentals">
 <p>First Name: <%= customer.first_name %></p>

@@ -73,16 +73,16 @@ class Rental
     sql = "SELECT customers.* FROM customers INNER JOIN rentals
            ON customers.id = $1"
     values = [@customer_id]
-    customer = SqlRunner.run(sql, values)
-    return customer.first
+    customer = SqlRunner.run(sql, values).first
+    return Customer.new(customer)
   end
 
   def game()
     sql = "SELECT games.* FROM games INNER JOIN rentals
            ON games.id = $1"
     values = [@game_id]
-    game = SqlRunner.run(sql, values)
-    return game.first
+    game = SqlRunner.run(sql, values).first
+    return Game.new(game)
   end
 
   def self.find_by_id(id)
