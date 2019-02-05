@@ -10,8 +10,8 @@
 
 body {
   margin: 0;
-  background-color: #fffffff2;
   background-color: white;
+  background-color: hsl(227, 3%, 94%);
 }
 
 body {}
@@ -89,13 +89,13 @@ h1 {}
   border-radius: 50px;
   box-shadow: -1px 20px 20px 6px black;
   animation: pop-in 1s ease-out forwards;
-  animation-delay: .5s;
+  animation-delay: .3s;
   opacity: 0;
 }
 
 #home-h1 {
   animation: pop-in 1s ease-out forwards;
-  animation-delay: .5s;
+  animation-delay: .3s;
   opacity: 0;
 }
 
@@ -156,12 +156,13 @@ form select {
   min-width: unset;
   text-align: center;
   padding: 40px;
-  border: #333 solid 5px;
+  border: #333 solid 2px;
   border-radius: 10px;
   margin: 10px;
   max-width: 200px;
   background-color: #3330;
   color: black;
+  background: #fff;
 }
 
 .games:hover {
