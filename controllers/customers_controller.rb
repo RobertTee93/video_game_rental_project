@@ -23,8 +23,8 @@ get "/customers/:id/edit" do
 end
 
 post "/customers/:id" do
-  new_customer = Customer.new(params)
-  new_customer.update()
+  customer = Customer.new(params)
+  customer.update()
   redirect( "/customers")
 end
 

@@ -24,3 +24,8 @@ post "/rentals/:id/delete" do
   @rental.delete
   erb ( :"rentals/return" )
 end
+
+get "/rentals/history" do
+  @rentals = Rental.history
+  erb( :"rentals/history" )
+end

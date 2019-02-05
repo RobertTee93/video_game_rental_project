@@ -10,7 +10,7 @@ get "/games" do
 end
 
 get "/games/sort/z-a" do
-  @games = Game.all
+  @games = Game.all.reverse
   erb( :"games/index_reverse" )
 end
 

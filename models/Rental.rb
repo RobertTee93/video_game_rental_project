@@ -32,19 +32,19 @@ class Rental
     sql = "INSERT INTO rental_history
     (
       rental_id,
-      game_id,
-      customer_id,
+      game_name,
+      customer_name,
       date_of_rental
     )
       VALUES
     (
       $1, $2, $3, $4
     )"
-    values = [@id, @game_id, @customer_id, @date_of_rental]
+    values = [@id, game().name, customer().full_name, @date_of_rental]
     SqlRunner.run(sql, values)
   end
 
-  def self.rental_history
+  def self.history
     sql = "SELECT * FROM rental_history"
     rentals = SqlRunner.run(sql)
     return rentals
@@ -70,19 +70,19 @@ class Rental
   end
 
   def customer()
-    sql = "SELECT * FROM customers INNER JOIN rentals
+    sql = "SELECT customers.* FROM customers INNER JOIN rentals
            ON customers.id = $1"
     values = [@customer_id]
-    customers = SqlRunner.run(sql, values)
-    return customers.map { |customer| Customer.new(customer) }
+    customer = SqlRunner.run(sql, values)
+    return customer.first
   end
 
-  def game
-    sql = "SELECT * FROM games INNER JOIN rentals
+  def game()
+    sql = "SELECT games.* FROM games INNER JOIN rentals
            ON games.id = $1"
     values = [@game_id]
-    games = SqlRunner.run(sql, values)
-    return games.map { |game| Game.new(game) }
+    game = SqlRunner.run(sql, values)
+    return game.first
   end
 
   def self.find_by_id(id)

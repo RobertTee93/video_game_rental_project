@@ -46,6 +46,10 @@ class Customer
     SqlRunner.run(sql, values)
   end
 
+  def full_name
+    return "#{@first_name} #{@last_name}"
+  end
+
   def delete
     sql = "DELETE FROM customers WHERE id = $1"
     values = [@id]

@@ -2,9 +2,16 @@
   font-family: 'Alegreya', serif;
 }
 
+.confirmation-message {
+  font-size: 30px;
+  text-align: center;
+  margin:150px;
+}
+
 body {
   margin: 0;
   background-color: #fffffff2;
+  background-color: white;
 }
 
 body {}
@@ -28,7 +35,12 @@ h1 {
   display: block;
   width: 100%;
   text-align: center;
+  box-shadow: 0 0 black;
+  color: black;
+  font-size: 50px;
 }
+
+h1 {}
 
 #main-nav {
   background: #333;
@@ -46,6 +58,7 @@ h1 {
 #main-nav ul {
   margin-top: 0;
   font-size: 30px;
+  padding-top: 3px;
 }
 
 #main-nav a {
@@ -66,6 +79,7 @@ h1 {
 #home-img {
   opacity: 0.8;
   border-radius: 50px;
+  box-shadow: -1px 20px 20px 6px black;
 }
 
 a {
@@ -117,14 +131,16 @@ form select {
   min-width: unset;
   text-align: center;
   padding: 40px;
-  border: #333 solid 1px;
+  border: #333 solid 5px;
   border-radius: 10px;
   margin: 10px;
   max-width: 200px;
   background-color: #3330;
   color: black;
-  box-shadow: inset 2px -5px 12px 0px black;
+  box-shadow: -10px 8px 20px -8px black;
 }
+
+.games {}
 
 .games {}
 
@@ -163,7 +179,7 @@ form select {
   color: white;
   border-radius: 50px;
   border: red 2px solid;
-  margin-top: 20px;
+  margin: 20px;
   box-shadow: inset 10px -7px 20px 2px #080808;
 }
 
@@ -184,6 +200,15 @@ form select {
 
 .rentals {
   text-align: center;
+  padding: 40px;
+  background-color: #333;
+  color: white;
+  border-radius: 50px;
+  border: red 2px solid;
+  margin: 20px;
+  box-shadow: inset 10px -7px 20px 2px #080808;
+  max-width: 200px;
+  min-width: 200px;
 }
 
 .rental_nav {order: -1;}

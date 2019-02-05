@@ -1,0 +1,11 @@
+<h1>Rental History</h1>
+
+<% @rentals.each do |rental| %>
+
+<div class="rentals">
+<p>Name: <%= rental["customer_name"]%></p>
+<p>Game: <%= rental["game_name"] %></p>
+<p>Date of Rental: <%= rental["date_of_rental"] %></p>
+<p>Returned Date: <%= rental["returned_date"] %></p>
+</div>
+<% end %>
