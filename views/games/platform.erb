@@ -1,6 +1,5 @@
 <h1><%=@games[0].platform%></h1>
 
-<div class="flex-container">
 <% @games.each do |game| %>
 <div class="games">
   <p>Name: <%= game.name %></p>
@@ -14,4 +13,3 @@
 </div>
 
 <% end %>
-</div>
