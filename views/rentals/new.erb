@@ -8,6 +8,8 @@
 
     <% if @games.length == 0 %>
        <option value="">No Games Available</option>
+    <% elsif @games.length == 1 %>
+       <option value="<%= @games[0].id %>"><%= @games[0].name %></option>
      <% else %>
         <% @games.each do |game|%>
         <option value="<%= game.id %>"> <%= game.name %> </option>

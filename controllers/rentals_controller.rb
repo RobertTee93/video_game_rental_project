@@ -29,3 +29,10 @@ get "/rentals/history" do
   @rentals = Rental.history
   erb( :"rentals/history" )
 end
+
+get "/rentals/:id/new" do
+  @customers = Customer.all
+  @games = []
+  @games << Game.find_by_id(params[:id])
+  erb( :"rentals/new")
+end

@@ -3,6 +3,7 @@
 
 
 <% @games.each do |game| %>
+<a href="/rentals/<%= game.id %>/new">
 <div class="games">
   <p>Name: <%= game.name %></p>
   <p>Genre: <%= game.genre %></p>
@@ -13,5 +14,6 @@
     <button type="submit">Delete</button>
   </form>
 </div>
+</a>
 
 <% end %>
