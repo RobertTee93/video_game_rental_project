@@ -4,10 +4,10 @@
 <form action="/rentals/" method="post">
 
   <label for="game">Game:</label>
-  <select name="game_id" id="game">
+  <select name="game_id" id="game" required>
 
     <% if @games.length == 0 %>
-       <option value="null">No Games Available</option>
+       <option value="">No Games Available</option>
      <% else %>
         <% @games.each do |game|%>
         <option value="<%= game.id %>"> <%= game.name %> </option>

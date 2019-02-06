@@ -148,7 +148,7 @@ form select {
 /* Games pages css */
 
 .games img {
-  height: 200px;
+  height: 225px;
   width: 200px;
 }
 
@@ -198,16 +198,16 @@ form select {
 .customers {
   text-align: center;
   padding: 40px;
-  background-color: #333;
-  color: white;
+  background-color: #fff;
+  color: black;
   border-radius: 50px;
-  border: red 2px solid;
+  border: black 2px solid;
   margin: 20px;
-  box-shadow: inset 10px -7px 20px 2px #080808;
 }
 
 .customers:hover {
   animation: grow .5s ease-out forwards;
+  box-shadow: -3px 4px 20px black;
 }
 
 .customers_nav {
@@ -228,12 +228,11 @@ form select {
 .rentals {
   text-align: center;
   padding: 40px;
-  background-color: #333;
-  color: white;
+  background-color: #fff;
+  color: black;
   border-radius: 50px;
-  border: red 2px solid;
+  border: black 2px solid;
   margin: 20px;
-  box-shadow: inset 10px -7px 20px 2px #080808;
   max-width: 200px;
   min-width: 200px;
 }
@@ -251,6 +250,7 @@ form select {
 
 .rentals:hover {
   animation: grow .5s ease-out forwards;
+  box-shadow: -7px 9px 20px black;
 }
 
 /*  animations */
