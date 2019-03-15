@@ -1,7 +1,7 @@
 # video_game_rental_project
 Video Game Rental web app using Ruby, Sinatra and PostgreSQL which allows games and customers to be added and games to be rented to customers.
 
-requirements to run app, Postgresql and Sinatra
+requirements to run app, PostgreSQL and Sinatra
 
 To run the app:
 
